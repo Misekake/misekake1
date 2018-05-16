@@ -13,10 +13,24 @@
     <button id="divide-btn">除</button>
     <p id="result">运算结果</p>
     <script>
-       document.getElementById("add-btn").onclick = function() {
-         var result = document.getElementById("first-number").value + document.getElementById("second-number").value;//找到元素
-               document.getElementById("result").innerHTML=result;//改变内容
-       }
+            var a = document.getElementById("first-number");
+            var b = document.getElementById("second-number");
+            var btn1 = document.getElementById("add-btn");
+            var btn2 = document.getElementById("minus-btn");
+            var btn3 = document.getElementById("times-btn");
+            var btn4 = document.getElementById("divide-btn");
+            btn1.onclick = function(){
+                document.getElementById("result").innerHTML = parseInt(a.value) + parseInt(b.value);
+            }
+            btn2.onclick = function(){
+                document.getElementById("result").innerHTML = a.value - b.value;
+            }
+            btn3.onclick = function(){
+                document.getElementById("result").innerHTML = a.value * b.value;
+            }
+            btn4.onclick = function(){
+                document.getElementById("result").innerHTML = a.value / b.value;
+            }
     </script>
 </body>
 </html>
